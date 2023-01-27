@@ -12,4 +12,6 @@ the course, so I will probably not be able to share my exact thoughts during the
 
 ## Current progress
 
-In the process of uploading 1st week..
+Uploaded all problems of the week 1 (in the name only; week 1 is easily doable in a span of a day).
+
+Currently adding the week 2.
