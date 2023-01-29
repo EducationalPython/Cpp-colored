@@ -131,3 +131,107 @@ for (const auto& s : v) {
 	foo(s);
 }
 ```
+
+## Maps
+
+The next container to learn is maps. Maps are containers that store elements with custom keys. The easiest way to think about them is to
+think about vectors: vectors store elements with predetermined keys: first element is stored with the key 0, then the next elemet with
+the key 1 and so on. To access the fifth element of the vector you have to call `v[4]`. Maps are similar, however you decide what keys
+would be used to store the elements. For example, if you want to use english words for numbers instead of arabic numerals, you can do so
+by introducing a map `map<string,int> m` and set:
+
+```C++
+m[zero] = first_element_of_map;
+m[one] = second_element_of_map;
+...
+```
+
+This very useful and convenient. I am not here to sell the concept of maps to you, so, let's get back to lecture. In the lecture they
+introduce the notion of maps on different examples and different ways to initialize maps (also, the default value if you've called the
+non-existent key). And then they discussed ways to iterate a map. For example if `map<string,int> m` is a map we want to iterate, then
+we can iterate it using range based for:
+
+```C++
+for (auto item : m) {
+	foo(item.first, item.second);
+}
+```
+Here `item.first` and `item.second` are the key and the value stored by that key, respectively; i.e. this is a true statement: 
+`m[item.first] = item.second`. Then again, it's better to iterate using references and perhaps `const` specificator:
+
+```C++
+for (auto& item : m) {
+	foo(item.first, item.second);
+}
+```
+or
+
+```C++
+for (const auto& item : m) {
+	foo(item.first, item.second);
+}
+```
+The object `item` is in fact a `std::pair` that stores a pair of elements `(item.first, item.second)`. Then they discuss a C++17 standard
+feature which I liked a lot. In C++17 you can iterate a map the following way:
+
+```C++
+for (auto& [key, value] : m) {
+	foo(key, value);
+}
+```
+or:
+
+```C++
+for (const auto& [key, value] : m) {
+	foo(key, value);
+}
+```
+
+Which helps a lot with readability of the code and very convenient to set up a logic and convenient in general compared to writing
+`item.first` and `item.second` all the time.
+
+## Sets
+
+The next and final topic of the 2nd week is sets. Sets are also similar to vectors, however they don't store the same element more than
+once. And also you, in a sense, don't have keys only values, if we use map terminology. So you can't access elements of the set using
+keys or __indexes__ (keys for vectors). You can search up why sets are very useful and how they are used in C++.
+
+The lecture then introduces `std::set::insert()` method to insert elements into a set. Just like vectors and maps, you can iterate through
+set using range based for. For e.g. if `set<int> s` is our set, then to perform operations on elements of this you can:
+
+```C++
+for (int value : s) {
+	foo(value);
+}
+```
+or
+
+```C++
+for (auto value : s) {
+	foo(value);
+}
+```
+if you don't want to think about types stored in your set. Then you also can use references and `const` specificator to save time
+and memory (for int maybe there's no win, but for anything more complex for sure) or if you want to change the elements of the set.
+
+```C++
+for (auto& value : s) {
+	foo(value);
+}
+```
+or
+
+```C++
+for (const auto& value : s) {
+	foo(value);
+}
+```
+
+Then they introduce ways to initialize a set (also the way to convert a vector into a set). They also introduced methods 
+`std::set::erase()` to delete elements from the set and `std::set::count()` to check if a certain object is an element of the set.
+
+## Conclusion
+
+That was the end of the week 2 on C++ White course and it was super useful. Even the most basic things they said about sets and maps was
+extremely useful to me, because I didn't have a proper understanding of them before but felt the need for containers like that from time
+to time.
