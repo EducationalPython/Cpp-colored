@@ -1,4 +1,6 @@
-# Lecture notes Functions
+# Lecture notes week 2
+
+## Functions
 
 The most basic info about writing functions in C++. Functions are simply distinct pieces of code which are only executed only if the
 function is called. The only function which is executed automatically is main() function.
@@ -71,3 +73,61 @@ this way you still avoid unnecessary copying but you can't change the vector in 
 
 And if you already know all of these and if by chance you are creating online courses on C++ or tutorials on C++ for beginners: don't
 teach beginners about pointers: most of the time beginners can manage to do everything they wanted using references.
+
+## Vectors
+
+The course next teaches about vectors, the very basic introductions to vectors. They didn't yet explain how vectors are implemented in
+C++ or what is the difference between vectors and arrays, and which operations are fast on vectors and which operations are slow. Just
+the very basics like how to initialize them, how to create vectors with certain size and fill them with default values, etc.
+
+Methods covered `std::vector::size()`, `std::vector::push_back()`, `std::vector::resize()`, `std::vector::assign()` and 
+`std::vector::clear()`.
+
+The thing I liked the most about vectors and other containers in C++ is __range based for__. If for e.g. you have a vector
+`vector<string> v` and you want to iterate through it in natural order, you **don't** need following:
+
+```C++
+int n = v.size();
+for (int i = 0; i < n; i++) {
+	foo(v[i]);
+}
+```
+
+This is __unnecessary__. All you have to do:
+
+```C++
+for (string s : v) {
+	foo(s);
+}
+```
+
+And you can further improve this by adding a reference to elements of the vector, so there's no unnecessary copying. Also if you do or
+do not want to change your vector you can add `const` specificator`:
+
+```C++
+for (string& s : v) {
+	foo(s);
+}
+```
+or :
+
+```C++
+for (const string& s : v) {
+	foo(s);
+}
+```
+
+Furthermore, if you don't want to think about the exact type of elements of the vector you can just use `auto` instead of the type:
+
+```C++
+for (auto& s : v) {
+	foo(s);
+}
+```
+or:
+
+```C++
+for (const auto& s : v) {
+	foo(s);
+}
+```

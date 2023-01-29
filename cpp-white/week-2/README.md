@@ -7,9 +7,7 @@ Functions and containers. Introduction
 ### Lecture notes: Functions
 
 You can access the lecture notes in russian in the file called "Lecture notes week 2 -- Functions.pdf" in the same folder and if you
-want to read my 5 cents about the lecture you can read them in "Lecture notes my comments.md" (for now it has only about functions; will
-be updating it, tho).
-
+want to read my 5 cents about the lecture you can read them in "Lecture notes my comments.md".
 ### Problem set: Functions
 
 #### Problem factorial
@@ -22,7 +20,7 @@ Write a function which checks whether the word is a palindrom
 
 #### Problem palindrom filter
 
-Write a function which receives `vector<string>` words and int minLength and returns all palindrom strings of the length no less than
+Write a function which receives `vector<string> words` and `int minLength` and returns all palindrom strings of the length no less than
 minLength.
 
 #### Problem maximizator
@@ -43,6 +41,9 @@ Write a function `void Reverse(vector<int>& v)` which will reverse the order in 
 Write a function `vector<int> Reversed(const vector<int>& v)` which will return the reversed copy of a vector v.
 
 ### Lecture notes: Container vector
+
+You can read what the lecture notes covered in russian in the file "Lecture notes week 2 -- Vectors, Maps, Sets.pdf" and my comments in
+"Lecture notes my comments.md".
 
 ### Problem set: Container vector
 
