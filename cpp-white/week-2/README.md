@@ -14,13 +14,13 @@ want to read my 5 cents about the lecture you can read them in "Lecture notes my
 
 Write a function which computes factorial of a non-negative integer.
 
-#### Problem palindrom
+#### Problem palindrome
 
-Write a function which checks whether the word is a palindrom
+Write a function which checks whether the word is a palindrome.
 
-#### Problem palindrom filter
+#### Problem palindrome filter
 
-Write a function which receives `vector<string> words` and `int minLength` and returns all palindrom strings of the length no less than
+Write a function which receives `vector<string> words` and `int minLength` and returns all palindrome strings of the length no less than
 minLength.
 
 #### Problem maximizator
@@ -114,4 +114,4 @@ and check whether two given words are synonyms or not.
 
 #### Problem Bus Stops 3
 
-__What a trilogy!__ The same as Problem "Bus Stops 2" with difference in a small detail (see in respective README file).
+_What a trilogy!_ The same as Problem "Bus Stops 2" with difference in a small detail (see in respective README file).

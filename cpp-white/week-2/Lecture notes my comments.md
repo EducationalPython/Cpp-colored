@@ -83,7 +83,7 @@ the very basics like how to initialize them, how to create vectors with certain 
 Methods covered `std::vector::size()`, `std::vector::push_back()`, `std::vector::resize()`, `std::vector::assign()` and 
 `std::vector::clear()`.
 
-The thing I liked the most about vectors and other containers in C++ is __range based for__. If for e.g. you have a vector
+The thing I liked the most about vectors and other containers in C++ is _range based for_. If for e.g. you have a vector
 `vector<string> v` and you want to iterate through it in natural order, you **don't** need following:
 
 ```C++
@@ -93,7 +93,7 @@ for (int i = 0; i < n; i++) {
 }
 ```
 
-This is __unnecessary__. All you have to do:
+This is _unnecessary_. All you have to do:
 
 ```C++
 for (string s : v) {
@@ -194,7 +194,7 @@ Which helps a lot with readability of the code and very convenient to set up a l
 
 The next and final topic of the 2nd week is sets. Sets are also similar to vectors, however they don't store the same element more than
 once. And also you, in a sense, don't have keys only values, if we use map terminology. So you can't access elements of the set using
-keys or __indexes__ (keys for vectors). You can search up why sets are very useful and how they are used in C++.
+keys or _indexes_ (keys for vectors). You can search up why sets are very useful and how they are used in C++.
 
 The lecture then introduces `std::set::insert()` method to insert elements into a set. Just like vectors and maps, you can iterate through
 set using range based for. For e.g. if `set<int> s` is our set, then to perform operations on elements of this you can:
