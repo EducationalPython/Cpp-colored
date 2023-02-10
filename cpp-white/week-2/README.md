@@ -54,7 +54,7 @@ Given a recordings of the temperature for several days find the days which are h
 #### Problem queue
 
 You have to simulate a queue which doesn't advance but people can come or leave the queue from the end. Also some people can become
-worried or calm down.
+worried or calm down (see details on problem's README file).
 
 #### Problem monthly activity
 
